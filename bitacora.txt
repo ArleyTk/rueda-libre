@@ -1,0 +1,20 @@
+URL completa: http://127.0.0.1:5500/index.html
+Protocolo: http://
+Host: 127.0.0.1:
+Puerto: 5500
+La ruta: index.html
+Metodo: GET
+Codigo de estado: 304
+
+Al intertar buscar la URL http://127.0.0.1:5500/promociones.html
+El servidor responde el codigo de estado 404, esto significa que el servidor
+no encontro el recurso pedido ya que /promociones.html no existe.
+
+Rol de HTML: Crear la estructura y el contenido de la pagina web Rueda Libre
+Ejemplo: Los titulos, los parrafos, enlaces y botones.
+
+Rol de CSS: Dar el diseño y estilo a la pagina web Rueda Libre.
+Ejemplo: El color, la tipografia y posición en la pantalla.
+
+Rol de JS: Dar la funcionamiento o dinamismo a la pagina web Rueda Libre.
+Ejemplo: Acciones, Transferencia de datos, etc...
