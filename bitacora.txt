@@ -1,33 +1,44 @@
+BITACORA PROYECTO RUEDA Libre
+
+1- Petición del documento principal
+
 URL completa: http://127.0.0.1:5500/index.html
-Protocolo: http://
-Host: 127.0.0.1:
-Puerto: 5500
-La ruta: index.html
-Metodo: GET
-Codigo de estado: 304
+Protocolo: http
+Puerto: 127.0.0.1:5500
+Ruta: /index.html
+Método HTTP: GET
+Código de estado: 304
+Interpretación:
+El navegador solicita el documento index.html al servidor local
+mediante una petición HTTP. El código de estado indica el resultado
+de esa petición.
 
-Al intertar buscar la URL http://127.0.0.1:5500/promociones.html
-El servidor responde el codigo de estado 404, esto significa que el servidor
-no encontro el recurso pedido ya que /promociones.html no existe.
+2- Prueba de una ruta inexistente
 
-Rol de HTML: Crear la estructura y el contenido de la pagina web Rueda Libre
-Ejemplo: Los titulos, los parrafos, enlaces y botones.
+URL solicitada: http://127.0.0.1:5500/promociones.html
+Código de estado: 404
+Interpretación:
+El navegador solicita el documento promociones.html al servidor local
+mediante una petición HTTP. El código de estado indica el resultado 404
+debido a que el documento no existe por lo cual no ha sido encontrado.
 
-Rol de CSS: Dar el diseño y estilo a la pagina web Rueda Libre.
-Ejemplo: El color, la tipografia y posición en la pantalla.
+3. Función de HTML, CSS y JAVASCRIPT
 
-Rol de JS: Dar la funcionamiento o dinamismo a la pagina web Rueda Libre.
-Ejemplo: Acciones, Transferencia de datos, etc...
+HTML:
+Define la estructura y el contenido de la página.
+Ejemplo: crear el título "Rueda Libre" y el párrafo de bienvenida.
 
-DOCUMENTACIÓN DE RUTAS:
-index to index: http://127.0.0.1:5500/index.html
-index to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
-index to reservas: http://127.0.0.1:5500/paginas/reservas.html
+CSS:
+Controla la presentación visual de la página.
+Ejemplo: mostrar el título en color verde y centrarlo en pantalla.
 
-tarifas to index: http://127.0.0.1:5500/index.html
-tarifas to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
-tarifas to reservas: http://127.0.0.1:5500/paginas/reservas.html
+JavaScript:
+Permite agregar interactividad y comportamiento.
+Ejemplo: crear un botón que muestre un mensaje cuando el usuario
+quiera consultar las bicicletas disponibles.
 
-reservas to index: http://127.0.0.1:5500/index.html
-reservas to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
-reservas to reservas: http://127.0.0.1:5500/paginas/reservas.html
+4. Aprendizajes
+
+Aprendí a crear la estructura inicial de un sitio web,
+inicializar un repositorio Git y a observar peticiones HTTP en DevTools desde
+chrome.
