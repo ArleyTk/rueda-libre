@@ -18,3 +18,16 @@ Ejemplo: El color, la tipografia y posición en la pantalla.
 
 Rol de JS: Dar la funcionamiento o dinamismo a la pagina web Rueda Libre.
 Ejemplo: Acciones, Transferencia de datos, etc...
+
+DOCUMENTACIÓN DE RUTAS:
+index to index: http://127.0.0.1:5500/index.html
+index to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
+index to reservas: http://127.0.0.1:5500/paginas/reservas.html
+
+tarifas to index: http://127.0.0.1:5500/index.html
+tarifas to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
+tarifas to reservas: http://127.0.0.1:5500/paginas/reservas.html
+
+reservas to index: http://127.0.0.1:5500/index.html
+reservas to tarifas: http://127.0.0.1:5500/paginas/tarifas.html
+reservas to reservas: http://127.0.0.1:5500/paginas/reservas.html
