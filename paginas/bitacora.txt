@@ -42,3 +42,12 @@ quiera consultar las bicicletas disponibles.
 Aprendí a crear la estructura inicial de un sitio web,
 inicializar un repositorio Git y a observar peticiones HTTP en DevTools desde
 chrome.
+
+
+git init
+git branch -M main
+git remote add origin https://github.com/TU-USUARIO/rueda-libre.git
+git status
+git add index.html paginas img bitacora.txt
+git commit -m "Crear estructura inicial del sitio Rueda Libre"
+git push -u origin main
