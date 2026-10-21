@@ -30,6 +30,19 @@
 </head>
 
 <body>
+    <nav class="container my-3" aria-label="Menú principal">
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="../index.html" aria-current="page">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./tarifas.html">Tarifas y rutas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./reservas.html">Reservas</a>
+        </li>
+    </ul>
+</nav>
     <header class="text-center">
         <a href="../index.html">
             <img class="border rounded" src="../img/logo.jpg" alt="Logo de Rueda Libre" width="120">
@@ -39,15 +52,12 @@
             Consulta nuestros precios de alquiler de bicicletas
             y descubre nuestros recorridos guiados para ti.
         </p>
-        <nav id="boton1">
-            <button id= "boton1" class="btn btn-primary" onclick="window.location.href='../index.html'">Volver al inicio</button>
-            <button id= "boton1" class="btn btn-primary" onclick="window.location.href='../index.html#recorridos'">Ver recorridos guiados</button>
-        </nav>
+
     </header>
     <main>
         <section>
             <div>
-                <table class="table table-striped table-hover table-bordered">
+                <table id="recorridos" class="table table-striped table-hover table-bordered">
                     <caption class="caption-top">
                         Precios de alquiler según el tipo de bicicleta y la duración
                     </caption>
@@ -127,14 +137,56 @@
             </table>
             </div>
         </section>
+        <section id="informacion-adicional" class="container mt-5">
+        <h2>Información adicional</h2>
+
+        <p>
+            Todas las tarifas de alquiler de bicicletas incluyen
+            <strong>casco y candado</strong> para que disfrutes tu recorrido
+            con mayor comodidad y seguridad.
+        </p>
+
+        <h3>Horarios de los recorridos guiados</h3>
+        <p>
+            Nuestros recorridos guiados se realizan los sábados y domingos
+            a las <strong>7:00 a. m.</strong>
+        </p>
+
+        <h3>¿Qué debes llevar?</h3>
+        <p>
+            Para disfrutar de la experiencia, te recomendamos llevar:
+        </p>
+
+        <ul>
+            <li>Ropa cómoda para montar en bicicleta.</li>
+            <li>Agua para mantenerte hidratado durante el recorrido.</li>
+            <li>Protector solar para protegerte del sol.</li>
+            <li>Documento de identidad.</li>
+        </ul>
+
+        <p>
+            ¿Tienes dudas sobre los precios o los recorridos?
+            Puedes regresar al inicio para conocer más sobre nuestros servicios.
+        </p>
+    </section>
     </main>
 
-    <footer>
-        <p class="text-center">
+    <footer class="text-center">
+        <nav id="boton1">
             <button id= "boton1" class="btn btn-primary" onclick="window.location.href='../index.html'">Volver al inicio</button>
-        </p>
+            <button id= "boton1" class="btn btn-primary" onclick="window.location.href='#recorridos'">Ver recorridos guiados</button>
+            <button class="btn btn-primary" onclick="window.location.href='./tarifas.html'">Tarifas</button>
+        </nav>
     </footer>
 
+    <footer class="container border-top mt-5 py-4 text-center">
+    <p><strong>Rueda Libre</strong></p>
+    <p>
+        Contacto:
+        <a href="mailto:hola@ruedalibre.com">hola@ruedalibre.com</a>
+    </p>
+    <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
+</footer>
 </body>
 
 </html>

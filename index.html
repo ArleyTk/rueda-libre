@@ -13,11 +13,25 @@
             height: 200px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
-<body style="text-align: center;">
-
-    <header>
+<body >
+    <nav class="container my-3" aria-label="Menú principal">
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="paginas/tarifas.html">Tarifas y rutas</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="paginas/reservas.html">Reservas</a>
+        </li>
+    </ul>
+</nav>
+    <header class="container mt-5">
         <h1>Rueda Libre</h1>
         <p>
             ¡Bienvenido a Rueda Libre! Queremos que descubras Medellín
@@ -29,7 +43,7 @@
         <img src="img/portada.jpeg" alt="Ciclista recorriendo una vía de Medellín en bicicleta" width="800">
     </header>
 
-    <main>
+    <main class="container mt-5">
         <section>
             <h2>¿Quiénes somos?</h2>
             <p>
@@ -54,8 +68,9 @@
 
                 <img src="img/bicicleta.jpeg" alt="Bicicleta disponible para alquilar en Rueda Libre" width="500">
             </article>
-            <nav>
-                <a href="./paginas/tarifas.html">Tarifas</a>
+            <nav style=" margin-top: 25px; margin-bottom: 50px">
+                <button class="btn btn-primary" onclick="window.location.href='./paginas/tarifas.html'">Tarifas</button>
+                <button class="btn btn-primary" onclick="window.location.href='./paginas/reservas.html'">Reservas</button>
             </nav>
 
             <article>
@@ -91,10 +106,10 @@
             </ul>
         </section>
 
-        <section>
+        <section class="container mt-5">
             <h2>¿Cómo alquilar?</h2>
             <ol>
-                <li>Contáctanos para consultar la disponibilidad de bicicletas.</li>
+                <li >Contáctanos para consultar la disponibilidad de bicicletas.</li>
                 <li>Elige la bicicleta y el tiempo de alquiler que necesitas.</li>
                 <li>Acércate al punto de atención y sigue las indicaciones para el alquiler.</li>
                 <li>Recibe tu bicicleta y disfruta de tu recorrido por Medellín.</li>
@@ -106,8 +121,8 @@
             <p>
                 ¿Quieres visitarnos o tienes alguna pregunta?
                 Escríbenos a
-                <a href="contactanos:hola@ruedalibre.com">
-                    contactanos@ruedalibre.com
+                <a href="mailto:hola@ruedalibre.com">
+                    hola@ruedalibre.com
                 </a>.
             </p>
 
@@ -118,8 +133,16 @@
                 </a>.
             </p>
         </section>
+        
     </main>
-
+<footer class="container border-top mt-5 py-4 text-center">
+    <p><strong>Rueda Libre</strong></p>
+    <p>
+        Contacto:
+        <a href="mailto:hola@ruedalibre.com">hola@ruedalibre.com</a>
+    </p>
+    <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
+</footer>
 </body>
 
 </html>
