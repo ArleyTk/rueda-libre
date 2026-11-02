@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,22 +15,23 @@
         <nav class="navbar navbar-expand-lg py-3 navbar-light bg-primary-darker">
             <div class="container">
                 <button aria-controls="myNavbar2" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button"> <span
-                        class="navbar-toggler-icon"></span> </button>
+                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="myNavbar2">
                     <div class="ml-5">
                         <ul class="navbar-nav" id="menu-menu-1">
-                            <li class="nav-item"> <a class="nav-link" href="../index.html">INICIO</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./menu.html">MENÚ</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./pedidos.html">PEDIDOS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./formulario.html">FORMULARIO</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./menu.html">MENÚ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pedidos.html">PEDIDOS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./formulario.html">FORMULARIO</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <main class="container mt-5 mb-5">
         <section class="row justify-content-center">
             <div class="col-md-6">
@@ -50,8 +52,7 @@
                                                 placeholder="Tu nombre completo" required>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="correo" class="form-label fw-semibold text-muted">Correo
-                                                electrónico</label>
+                                            <label for="correo" class="form-label fw-semibold text-muted">Correo electrónico</label>
                                             <input type="email" class="form-control" id="correo" name="correo"
                                                 placeholder="ejemplo@correo.com" required>
                                         </div>
@@ -66,16 +67,16 @@
                                             </select>
                                         </div>
                                         <div class="mb-4">
-                                            <label for="mensaje"
-                                                class="form-label fw-semibold text-muted">Mensaje</label>
+                                            <label for="mensaje" class="form-label fw-semibold text-muted">Mensaje</label>
                                             <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
                                                 placeholder="Escribe tu mensaje aquí..." required></textarea>
                                         </div>
                                         <div class="d-grid gap-2">
-                                            <button type="button" class="btn btn-primary fw-bold py-2 shadow-sm">Enviar
-                                                mensaje</button>
-                                            <a href="../index.html" class="btn btn-outline-secondary py-2">Volver al
-                                                inicio</a>
+                                            <button type="button" class="btn btn-primary fw-bold py-2 shadow-sm"
+                                                data-bs-toggle="modal" data-bs-target="#modalConfirmacion">
+                                                Enviar mensaje
+                                            </button>
+                                            <a href="../index.html" class="btn btn-outline-secondary py-2">Volver al inicio</a>
                                         </div>
                                     </form>
 
@@ -89,11 +90,31 @@
         </section>
     </main>
 
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar envío</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Estás seguro de que deseas enviar este mensaje?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="container border-top mt-4 py-3 text-center">
         <p><strong>Sabor Casero</strong></p>
         <p><a href="mailto:contacto@saborcasero.com">contacto@saborcasero.com</a></p>
         <p>&copy; 2026 Sabor Casero. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
