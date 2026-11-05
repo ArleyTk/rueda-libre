@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubre Sabor Casero en Medellín.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
     <title>Sabor Casero | Restaurante en Medellín</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,29 +25,34 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-3 navbar-light bg-primary-darker">
-            <div class="container">
-                <button aria-controls="myNavbar2" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button"> <span
-                        class="navbar-toggler-icon"></span> </button>
-                <div class="collapse navbar-collapse" id="myNavbar2">
-                    <div class="ml-5">
-                        <ul class="navbar-nav" id="menu-menu-1">
-                            <li class="nav-item"> <a class="nav-link" href="index.html">INICIO</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./paginas/menu.html">MENÚ</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./paginas/pedidos.html">PEDIDOS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./paginas/formulario.html">FORMULARIO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <nav class="py-4">
+            <div class="container mx-auto px-4">
+                <ul class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+                    <li>
+                        <a href="index.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="./paginas/menu.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">MENÚ</a>
+                    </li>
+                    <li>
+                        <a href="./paginas/pedidos.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">PEDIDOS</a>
+                    </li>
+                    <li>
+                        <a href="./paginas/formulario.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">FORMULARIO</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
 
     <section class="container mt-5">
-        <h1>Sabor Casero</h1>
-        <p>¡Bienvenido a Sabor Casero! Disfruta comidas deliciosas, preparadas con ingredientes frescos y mucho cariño.
+        <h1 class="mb-4 font-bold text-heading text-3xl lg:text-5xl">Sabor Casero</h1>
+        <p class="text-base text-dark-700 leading-relaxed mb-4">¡Bienvenido a Sabor Casero! Disfruta comidas deliciosas,
+            preparadas con ingredientes frescos y mucho cariño.
             Visita nuestra sección <a href="#encuentranos">Encuéntranos</a>.</p>
         <div class="img1">
             <img src="img/saborcasero.png" alt="Plato de comida casera">
@@ -43,15 +61,17 @@
 
     <main class="container mt-5">
         <section>
-            <h2>¿Quiénes somos?</h2>
-            <p>En Sabor Casero somos un restaurante dedicado a ofrecer comida fresca y deliciosa en Medellín. Queremos
+            <h2 class="mb-4 font-bold text-heading text-2xl lg:text-3xl">¿Quiénes somos?</h2>
+            <p class="mb-5">En Sabor Casero somos un restaurante dedicado a ofrecer comida fresca y deliciosa en
+                Medellín. Queremos
                 que nuestros clientes disfruten recetas tradicionales, ingredientes de calidad y una atención amable.
             </p>
         </section>
         <hr>
         <section>
-            <h2>Nuestros servicios</h2>
-            <p>En nuestro menú encuentras el equilibrio perfecto para cada antojo del día. Disfruta de la calidez de
+            <h2 class="mb-4 font-bold text-heading text-2xl lg:text-3xl">Nuestros servicios</h2>
+            <p class="mb-5">En nuestro menú encuentras el equilibrio perfecto para cada antojo del día. Disfruta de la
+                calidez de
                 nuestros almuerzos caseros, preparados con ingredientes frescos y ese sazón reconfortante que te hace
                 sentir como en casa. Si buscas una opción rápida y llena de sabor, nuestra línea de comida rápida tiene
                 las alternativas perfectas para satisfacer tu hambre al instante. Para cerrar con broche de oro, deleita
@@ -59,161 +79,255 @@
                 ¡Sabor, tradición y antojos en un solo lugar!</p>
             <article>
                 <hr>
-                <h3>Almuerzos caseros</h3>
+                <h3 class="mb-4 font-bold text-heading text-xl lg:text-2xl">Almuerzos caseros</h3>
                 <p>Ofrecemos almuerzos completos con arroz, proteína, ensalada, acompañamiento y bebida. Cada plato está
                     preparado para que disfrutes el sabor de la comida hecha en casa.</p>
-                <section class="d-flex flex-wrap gap-5">
-                    <div class="card carta">
-                        <img class=" img-fluid" src="./img/Pescado-Frito.jpg" alt="Card image cap"
-                            style="height: 200px; width: 290px;;">
-                        <div class="card-body">
-                            <h5 class="card-title">Pescado Frito</h5>
-                            <p class="card-text">Servido sobre tortillas de maíz calientitas, acompañado de un toque
-                                fresco de limón y nuestra cremosa salsa
-                                especial de la casa.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
-                        </div>
+                <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5 mb-5">
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/comida.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Tacos dorados</h5>
-                            <p class="card-text">Están hechos con tortillas de maíz enrolladas y fritas a la perfección
-                                hasta lograr un dorado crujiente e irresistible.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/Pescado-Frito.jpg" alt="Pescado Frito">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Pescado Frito</div>
+                            <p class="text-gray-700 text-base">
+                                Servido sobre tortillas de maíz calientitas, acompañado de
+                                un toque fresco de limón y nuestra cremosa salsa
+                                especial de la casa.
+                            </p>
                         </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/paisa.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Bandeja Paisa</h5>
-                            <p class="card-text">Tradición en la mesa. Nuestra propuesta de comida paisa
-                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/comida.jpeg" alt="Tacos dorados">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Tacos dorados</div>
+                            <p class="text-gray-700 text-base">
+                                Están hechos con tortillas de maíz enrolladas y fritas a la
+                                perfección hasta lograr un dorado crujiente e irresistible.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/especial.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Especial</h5>
-                            <p class="card-text">Está compuesta por huevos, frijoles y aros de cebolla que crujientes e
-                                irresistibles.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/paisa.jpg" alt="Bandeja Paisa">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Bandeja Paisa</div>
+                            <p class="text-gray-700 text-base">
+                                Tradición en la mesa. Nuestra propuesta de comida paisa
+                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/especial.jpg" alt="Especial">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Especial</div>
+                            <p class="text-gray-700 text-base">
+                                Está compuesta por huevos, frijoles y aros de cebolla
+                                que son crujientes e irresistibles.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
 
                 </section>
-
-
             </article>
             <hr>
             <article>
-                <h3>Comidas rápidas</h3>
+                <h3 class="mb-4 font-bold text-heading text-xl lg:text-2xl">Comidas rápidas</h3>
                 <p>Preparamos hamburguesas, perros calientes y papas fritas para quienes buscan una comida rica y
                     práctica.</p>
-                <section class="d-flex flex-wrap gap-5">
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/Pescado-Frito.jpg" alt="Card image cap"
-                            style="height: 200px; width: 290px;;">
-                        <div class="card-body">
-                            <h5 class="card-title">Pescado Frito</h5>
-                            <p class="card-text">Servido sobre tortillas de maíz calientitas, acompañado de un toque
-                                fresco de limón y nuestra cremosa salsa
-                                especial de la casa.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
-                        </div>
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/comida.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Tacos dorados</h5>
-                            <p class="card-text">Están hechos con tortillas de maíz enrolladas y fritas a la perfección
-                                hasta lograr un dorado crujiente e irresistible.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
-                        </div>
+                <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5 mb-5">
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/paisa.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Bandeja Paisa</h5>
-                            <p class="card-text">Tradición en la mesa. Nuestra propuesta de comida paisa
-                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/Pescado-Frito.jpg" alt="Pescado Frito">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Pescado Frito</div>
+                            <p class="text-gray-700 text-base">
+                                Servido sobre tortillas de maíz calientitas, acompañado de
+                                un toque fresco de limón y nuestra cremosa salsa
+                                especial de la casa.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/especial.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Especial</h5>
-                            <p class="card-text">Está compuesta por huevos, frijoles y aros de cebolla que crujientes e
-                                irresistibles.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/comida.jpeg" alt="Tacos dorados">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Tacos dorados</div>
+                            <p class="text-gray-700 text-base">
+                                Están hechos con tortillas de maíz enrolladas y fritas a la
+                                perfección hasta lograr un dorado crujiente e irresistible.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/paisa.jpg" alt="Bandeja Paisa">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Bandeja Paisa</div>
+                            <p class="text-gray-700 text-base">
+                                Tradición en la mesa. Nuestra propuesta de comida paisa
+                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/especial.jpg" alt="Especial">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Especial</div>
+                            <p class="text-gray-700 text-base">
+                                Está compuesta por huevos, frijoles y aros de cebolla
+                                que son crujientes e irresistibles.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
 
                 </section>
             </article>
+
+            <!-- ===================== POSTRES Y BEBIDAS ===================== -->
             <hr>
             <article>
-                <h3>Postres y bebidas</h3>
+                <h3 class="mb-4 font-bold text-heading text-xl lg:text-2xl">Postres y bebidas</h3>
                 <p>Complementa tu comida con postres caseros, jugos naturales y bebidas refrescantes.</p>
-                <section class="d-flex flex-wrap gap-5">
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/Pescado-Frito.jpg" alt="Card image cap"
-                            style="height: 200px; width: 290px;;">
-                        <div class="card-body">
-                            <h5 class="card-title">Pescado Frito</h5>
-                            <p class="card-text">Servido sobre tortillas de maíz calientitas, acompañado de un toque
-                                fresco de limón y nuestra cremosa salsa
-                                especial de la casa.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
-                        </div>
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/comida.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Tacos dorados</h5>
-                            <p class="card-text">Están hechos con tortillas de maíz enrolladas y fritas a la perfección
-                                hasta lograr un dorado crujiente e irresistible.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
-                        </div>
+                <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5 mb-5">
 
-                    </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/paisa.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Bandeja Paisa</h5>
-                            <p class="card-text">Tradición en la mesa. Nuestra propuesta de comida paisa
-                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/Pescado-Frito.jpg" alt="Pescado Frito">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Pescado Frito</div>
+                            <p class="text-gray-700 text-base">
+                                Servido sobre tortillas de maíz calientitas, acompañado de
+                                un toque fresco de limón y nuestra cremosa salsa
+                                especial de la casa.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
-                    <div class="card carta">
-                        <img class="img-fluid" src="./img/especial.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Especial</h5>
-                            <p class="card-text">Está compuesta por huevos, frijoles y aros de cebolla que crujientes e
-                                irresistibles.</p>
-                            <a href="#entrybtn" class="btn btn-primary">¡Quiero este!</a>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/comida.jpeg" alt="Tacos dorados">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Tacos dorados</div>
+                            <p class="text-gray-700 text-base">
+                                Están hechos con tortillas de maíz enrolladas y fritas a la
+                                perfección hasta lograr un dorado crujiente e irresistible.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/paisa.jpg" alt="Bandeja Paisa">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Bandeja Paisa</div>
+                            <p class="text-gray-700 text-base">
+                                Tradición en la mesa. Nuestra propuesta de comida paisa
+                                rinde homenaje a los sabores auténticos de las montañas antioqueñas.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col w-full max-w-sm mx-auto rounded overflow-hidden shadow-lg bg-white">
+                        <img class="w-full h-[200px] object-cover" src="./img/especial.jpg" alt="Especial">
+                        <div class="px-6 py-4 flex-1">
+                            <div class="font-bold text-xl mb-2">Especial</div>
+                            <p class="text-gray-700 text-base">
+                                Está compuesta por huevos, frijoles y aros de cebolla
+                                que son crujientes e irresistibles.
+                            </p>
+                        </div>
+                        <div class="px-6 pb-4">
+                            <a href="#entrybtn"
+                                class="inline-block bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+                                ¡Quiero este!
+                            </a>
                         </div>
                     </div>
 
                 </section>
             </article>
+
             <hr>
-            <p id="entrybtn" class="text-center my-4 gap-5">
-                <a class="btn btn-primary" href="paginas/menu.html">Ver menú completo</a>
-                <a class="btn btn-warning" href="paginas/pedidos.html">Haz tu pedido</a>
+            <p id="entrybtn" class="text-center my-4 flex flex-wrap justify-center gap-4">
+                <a href="paginas/menu.html"
+                    class="bg-red-800 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">Ver menú
+                    completo</a>
+                <a href="paginas/pedidos.html"
+                    class="bg-yellow-400 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded-full">Haz tu
+                    pedido</a>
             </p>
         </section>
         <hr>
         <section>
-            <h2>¿Por qué elegir Sabor Casero?</h2>
+            <h2 class="mb-4 font-bold text-heading text-2xl lg:text-3xl">¿Por qué elegir Sabor Casero?</h2>
             <ul>
                 <li>Utilizamos ingredientes frescos.</li>
                 <li>Ofrecemos variedad de platos y precios.</li>
@@ -222,7 +336,7 @@
         </section>
         <hr>
         <section class="mt-5">
-            <h2>¿Cómo hacer un pedido?</h2>
+            <h2 class="mb-4 font-bold text-heading text-2xl lg:text-3xl">¿Cómo hacer un pedido?</h2>
             <ol>
                 <li>Consulta nuestro menú y los precios.</li>
                 <li>Elige los platos que deseas.</li>
@@ -232,7 +346,7 @@
         </section>
         <hr>
         <section id="encuentranos" class="mt-5">
-            <h2>Encuéntranos</h2>
+            <h2 class="mb-4 font-bold text-heading text-2xl lg:text-3xl">Encuéntranos</h2>
             <p>¿Tienes preguntas? Escríbenos a <a href="mailto:contacto@saborcasero.com">contacto@saborcasero.com</a>.
             </p>
             <p>Consulta Medellín en <a href="https://www.google.com/maps/search/?api=1&query=Medellin%2C+Colombia"

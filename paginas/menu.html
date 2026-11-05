@@ -5,6 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consulta el menú y los precios de Sabor Casero en Medellín.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
     <title>Menú y precios | Sabor Casero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../styles.css">
@@ -12,33 +25,52 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-3 navbar-light bg-primary-darker">
-            <div class="container">
-                <button aria-controls="myNavbar2" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button"> <span
-                        class="navbar-toggler-icon"></span> </button>
-                <div class="collapse navbar-collapse" id="myNavbar2">
-                    <div class="ml-5">
-                        <ul class="navbar-nav" id="menu-menu-1">
-                            <li class="nav-item"> <a class="nav-link" href="../index.html">INICIO</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./menu.html">MENÚ</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./pedidos.html">PEDIDOS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./formulario.html">FORMULARIO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <nav class="py-4">
+            <div class="container mx-auto px-4">
+
+                <ul class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+
+                    <li>
+                        <a href="../index.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./menu.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            MENÚ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pedidos.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            PEDIDOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./formulario.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            FORMULARIO
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
         </nav>
     </header>
     <section class="container text-center">
-        <h1>Menú de Sabor Casero</h1>
+        <h1 class="mb-4 font-bold text-heading lg:text-5xl">Menú de Sabor Casero</h1>
         <p>Conoce nuestros platos y disfruta el sabor de la comida casera.</p>
     </section>
 
     <main>
         <section class="container mt-5">
-            <h2>Almuerzos caseros</h2>
+            <h2 class="mb-4 font-bold text-heading lg:text-3xl">Almuerzos caseros</h2>
             <table class="table table-striped table-hover table-bordered">
                 <caption class="caption-top">Precios de nuestros almuerzos</caption>
                 <thead class="table-secondary">
@@ -69,7 +101,7 @@
         </section>
 
         <section class="container mt-5">
-            <h2>Comidas rápidas</h2>
+            <h2 class="mb-4 font-bold text-heading lg:text-3xl">Comidas rápidas</h2>
             <table class="table table-striped table-hover table-bordered">
                 <caption class="caption-top">Precios de comidas rápidas</caption>
                 <thead class="table-secondary">
@@ -100,7 +132,7 @@
         </section>
 
         <section class="container mt-5">
-            <h2>Postres y bebidas</h2>
+            <h2 class="mb-4 font-bold text-heading lg:text-3xl">Postres y bebidas</h2>
             <table class="table table-striped table-hover table-bordered">
                 <thead class="table-secondary">
                     <tr>
@@ -126,18 +158,19 @@
         </section>
 
         <section class="container mt-5">
-            <h2>Información adicional</h2>
+            <h2 class="mb-4 font-bold text-heading lg:text-3xl">Información adicional</h2>
             <p>Los precios están expresados en pesos colombianos y pueden variar según la disponibilidad de los
                 ingredientes.</p>
-            <aside>
-                <h3>Recomendaciones</h3>
-                <ul>
-                    <li>Consulta los ingredientes si tienes alguna alergia.</li>
-                    <li>Realiza tu pedido con anticipación.</li>
-                    <li>Pregunta por el plato especial del día.</li>
-                </ul>
-            </aside>
-            <a class="btn btn-secondary" href="pedidos.html">Hacer un pedido</a>
+            <h3 class="mb-4 mt-4 font-bold text-heading lg:text-2xl">Recomendaciones</h3>
+            <ul>
+                <li>Consulta los ingredientes si tienes alguna alergia.</li>
+                <li>Realiza tu pedido con anticipación.</li>
+                <li>Pregunta por el plato especial del día.</li>
+            </ul>
+            <button class="bg-yellow-400 mt-5 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded-full">
+                <a href="pedidos.html">Hacer un pedido</a>
+            </button>
+
         </section>
     </main>
 

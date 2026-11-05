@@ -4,42 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta cómo realizar pedidos en Sabor Casero.">
-    <title>Pedidos | Sabor Casero</title>
+    <meta name="description" content="Consulta el menú y los precios de Sabor Casero en Medellín.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Menú y precios | Sabor Casero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../styles.css">
 </head>
 
 <body>
-
     <header>
-        <nav class="navbar navbar-expand-lg py-3 navbar-light bg-primary-darker">
-            <div class="container">
-                <button aria-controls="myNavbar2" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button"> <span
-                        class="navbar-toggler-icon"></span> </button>
-                <div class="collapse navbar-collapse" id="myNavbar2">
-                    <div class="ml-5">
-                        <ul class="navbar-nav" id="menu-menu-1">
-                            <li class="nav-item"> <a class="nav-link" href="../index.html">INICIO</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./menu.html">MENÚ</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./pedidos.html">PEDIDOS</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="./formulario.html">FORMULARIO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <nav class="py-4">
+            <div class="container mx-auto px-4">
+
+                <ul class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+
+                    <li>
+                        <a href="../index.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./menu.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            MENÚ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pedidos.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            PEDIDOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./formulario.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            FORMULARIO
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
         </nav>
     </header>
-    <section class="container py-4 text-center">
+    <section class="container py-4 text-center mt-3 mb-5">
         <h1 class="display-5 mt-3">Haz tu pedido</h1>
         <p>En Sabor Casero queremos que disfrutes tus platos favoritos.</p>
     </section>
-    <div class="container">
+    <div class="container h-[440px]">
         <div class="row">
             <div class="col-md-4">
-                <h2>¿Cómo realizar un pedido?</h2>
+                <h2 class="mb-4 font-bold text-heading lg:text-3xl">¿Cómo realizar un pedido?</h2>
                 <ol>
                     <li>Consulta nuestro menú y selecciona tus platos.</li>
                     <li>Indica las cantidades que deseas.</li>
@@ -51,7 +82,7 @@
             </div>
 
             <div class="col-md-4">
-                <h2>Horario de atención</h2>
+                <h2 class="mb-4 font-bold text-heading lg:text-3xl">Horario de atención</h2>
                 <dl>
                     <dt>Lunes a viernes</dt>
                     <dd>11:00 a. m. a 8:00 p. m.</dd>
@@ -61,10 +92,10 @@
             </div>
 
             <div class="col-md-4">
-                <h2>¿Necesitas ayuda?</h2>
+                <h2 class="mb-4 font-bold text-heading lg:text-3xl">¿Necesitas ayuda?</h2>
                 <p>Si tienes dudas sobre los ingredientes, los precios o tu pedido, puedes escribirnos desde nuestro
                     formulario de contacto.</p>
-                <button type="button" class="btn btn-primary text-white">
+                <button class="bg-red-800 mt-4 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
                     <a class="text-white" href="formulario.html">Ir al formulario</a>
                 </button>
             </div>
@@ -72,7 +103,7 @@
     </div>
 
 
-    <footer class="container border-top mt-5 py-4 text-center">
+    <footer class="container border-top mt-5 py-4 text-center ">
         <p><strong>Sabor Casero</strong></p>
         <p>Contacto: <a href="mailto:contacto@saborcasero.com">contacto@saborcasero.com</a></p>
         <p>&copy; 2026 Sabor Casero. Todos los derechos reservados.</p>

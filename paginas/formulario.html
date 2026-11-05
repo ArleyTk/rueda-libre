@@ -1,33 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor Casero | Contacto</title>
+    <meta name="description" content="Consulta el menú y los precios de Sabor Casero en Medellín.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Menú y precios | Sabor Casero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./../styles.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg py-3 navbar-light bg-primary-darker">
-            <div class="container">
-                <button aria-controls="myNavbar2" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler" data-bs-target="#myNavbar2" data-bs-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="myNavbar2">
-                    <div class="ml-5">
-                        <ul class="navbar-nav" id="menu-menu-1">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./menu.html">MENÚ</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./pedidos.html">PEDIDOS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./formulario.html">FORMULARIO</a></li>
-                        </ul>
-                    </div>
-                </div>
+        <nav class="py-4">
+            <div class="container mx-auto px-4">
+
+                <ul class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+
+                    <li>
+                        <a href="../index.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            INICIO
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./menu.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            MENÚ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./pedidos.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            PEDIDOS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./formulario.html"
+                            class="text-white font-semibold hover:text-yellow-300 transition duration-300">
+                            FORMULARIO
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
         </nav>
     </header>
@@ -35,7 +67,7 @@
     <main class="container mt-5 mb-5">
         <section class="row justify-content-center">
             <div class="col-md-6">
-                <h1 class="text-center mb-4 ">Contáctanos</h1>
+                <h1 class="text-center mb-4 font-bold text-heading lg:text-5xl">Contáctanos</h1>
                 <p class="text-center">Escríbenos si tienes preguntas sobre nuestro menú o tus pedidos.</p>
 
                 <div class="container my-5">
@@ -45,20 +77,29 @@
                                 <div class="card-body p-4 p-sm-5">
                                     <h3 class="card-title text-center mb-4 fw-bold text-dark">Contacto</h3>
 
-                                    <form action="#" method="post">
-                                        <div class="mb-3">
-                                            <label for="nombre" class="form-label fw-semibold text-muted">Nombre</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre"
-                                                placeholder="Tu nombre completo" required>
+                                    <form id="formContacto" action="#" method="post" class="space-y-5">
+                                        <div>
+                                            <label for="nombre" class="block mb-2 text-sm font-semibold text-gray-600">
+                                                Nombre
+                                            </label>
+                                            <input type="text" id="nombre" name="nombre"
+                                                placeholder="Tu nombre completo" required
+                                                class="w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 placeholder:text-gray-400">
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="correo" class="form-label fw-semibold text-muted">Correo electrónico</label>
-                                            <input type="email" class="form-control" id="correo" name="correo"
-                                                placeholder="ejemplo@correo.com" required>
+                                        <div>
+                                            <label for="correo" class="block mb-2 text-sm font-semibold text-gray-600">
+                                                Correo electrónico
+                                            </label>
+                                            <input type="email" id="correo" name="correo"
+                                                placeholder="ejemplo@correo.com" required
+                                                class="w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100 placeholder:text-gray-400">
                                         </div>
-                                        <div class="mb-3">
-                                            <label for="asunto" class="form-label fw-semibold text-muted">Asunto</label>
-                                            <select class="form-select" id="asunto" name="asunto" required>
+                                        <div>
+                                            <label for="asunto" class="block mb-2 text-sm font-semibold text-gray-600">
+                                                Asunto
+                                            </label>
+                                            <select id="asunto" name="asunto" required
+                                                class="w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
                                                 <option value="" selected disabled>Selecciona una opción</option>
                                                 <option value="menu">Consulta sobre el menú</option>
                                                 <option value="pedido">Pedido</option>
@@ -66,18 +107,29 @@
                                                 <option value="otro">Otro</option>
                                             </select>
                                         </div>
-                                        <div class="mb-4">
-                                            <label for="mensaje" class="form-label fw-semibold text-muted">Mensaje</label>
-                                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4"
-                                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                        <div>
+                                            <label for="mensaje" class="block mb-2 text-sm font-semibold text-gray-600">
+                                                Mensaje
+                                            </label>
+                                            <textarea id="mensaje" name="mensaje" rows="4"
+                                                placeholder="Escribe tu mensaje aquí..." required
+                                                class="w-full px-4 py-3 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg outline-none transition resize-y focus:border-blue-500 focus:ring-2 focus:ring-blue-100 placeholder:text-gray-400"></textarea>
                                         </div>
-                                        <div class="d-grid gap-2">
-                                            <button type="button" class="btn btn-primary fw-bold py-2 shadow-sm"
-                                                data-bs-toggle="modal" data-bs-target="#modalConfirmacion">
+                                        <div class="flex flex-col gap-3">
+
+                                            <!-- Abre el modal (label asociado al checkbox) -->
+                                            <label for="modalConfirmacion"
+                                                class="w-full cursor-pointer py-3 px-4 text-center font-bold text-white bg-blue-600 rounded-lg shadow-sm transition duration-200 hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                                 Enviar mensaje
-                                            </button>
-                                            <a href="../index.html" class="btn btn-outline-secondary py-2">Volver al inicio</a>
+                                            </label>
+
+                                            <a href="../index.html"
+                                                class="w-full py-3 px-4 text-center font-semibold text-gray-600 border border-gray-300 rounded-lg transition duration-200 hover:bg-gray-100 hover:text-gray-800">
+                                                Volver al inicio
+                                            </a>
+
                                         </div>
+
                                     </form>
 
                                 </div>
@@ -89,21 +141,35 @@
             </div>
         </section>
     </main>
-
-    <div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Confirmar envío</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    ¿Estás seguro de que deseas enviar este mensaje?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
-                </div>
+    <input type="checkbox" id="modalConfirmacion" class="peer sr-only" />
+    <div class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center p-4
+                opacity-[0] [visibility:hidden] transition-all duration-200
+                peer-checked:pointer-events-auto peer-checked:opacity-[1] peer-checked:[visibility:visible]
+                peer-checked:[&>div]:scale-100" role="dialog" aria-modal="true"
+        aria-labelledby="modalConfirmacionTitulo">
+        <label for="modalConfirmacion" aria-label="Cerrar" class="absolute inset-0 cursor-default bg-black/50"></label>
+        <div class="relative w-full max-w-lg scale-95 rounded-lg bg-white shadow-xl transition-transform duration-200">
+            <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3">
+                <h5 id="modalConfirmacionTitulo" class="m-0 text-xl font-medium text-gray-900">Confirmar envío</h5>
+                <label for="modalConfirmacion" aria-label="Cerrar"
+                    class="cursor-pointer rounded p-1 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </label>
+            </div>
+            <div class="px-4 py-4 text-gray-700">
+                ¿Estás seguro de que deseas enviar este mensaje?
+            </div>
+            <div class="flex items-center justify-end gap-2 border-t border-gray-200 px-4 py-3">
+                <label for="modalConfirmacion"
+                    class="m-0 cursor-pointer rounded-md bg-gray-600 px-4 py-2 text-white hover:bg-gray-700">
+                    Cancelar
+                </label>
+                <button type="submit" form="formContacto"
+                    class="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+                    Confirmar
+                </button>
             </div>
         </div>
     </div>
@@ -113,8 +179,6 @@
         <p><a href="mailto:contacto@saborcasero.com">contacto@saborcasero.com</a></p>
         <p>&copy; 2026 Sabor Casero. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
