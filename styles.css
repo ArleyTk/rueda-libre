@@ -6,7 +6,7 @@
 
 
 header {
-    background-color: #eccccc;
+    background-color: #43477c;
     color: #FFF;
     display: flex;
     justify-content: center;
@@ -58,16 +58,22 @@ header nav ul li {
 
 
 body {
-    background-color: #fffaf4;
-    color: #333333;
+    background-color: #f0f0f0;
+    color: #000000;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-header,
+/* header,
 main,
 footer {
     margin-bottom: 2rem;
+} */
+
+
+footer {
+    background-color: #2d3050;
+    color: white;
 }
 
 h1,
