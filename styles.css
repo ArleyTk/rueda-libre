@@ -91,6 +91,8 @@ img {
 
 }
 
+
+
 .img1 {
     display: flex;
     justify-content: center;
@@ -129,4 +131,79 @@ img {
 footer {
 
     text-align: center;
+}
+
+.btn-float {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 90%;
+    right: 95px;
+    border-radius: 50px 50px 50px 50px;
+    height: 50px;
+    width: 50px;
+    background-color: #6777e1;
+    border: #353569 solid 3px;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+body.dark-mode header {
+    background-color: #1f2140;
+}
+
+body.dark-mode footer {
+    background-color: #0d0d1a;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+    color: #ff7b7b;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #cfcfcf !important;
+}
+
+body.dark-mode .text-blue-500 {
+    color: #7db7ff !important;
+}
+
+body.dark-mode hr {
+    border-color: #555;
+}
+
+body.dark-mode .btn-float {
+    background-color: #feffca;
+    border-color: #edfa00;
+}
+
+body.dark-mode .btn-float i {
+    color: #eeff00;
+}
+
+i {
+    font-size: 30px;
+    color: #fff700;
+}
+
+body.dark-mode .card-body {
+    background-color: #343435;
+}
+
+body.dark-mode .card-title {
+    color: #d54242;
 }
